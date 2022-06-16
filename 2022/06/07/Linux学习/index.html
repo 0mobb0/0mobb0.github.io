@@ -1,14 +1,16 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux学习 | All about secret</title><meta name="author" content="mobb"><meta name="copyright" content="mobb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="article">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux学习 | All about secret</title><meta name="author" content="mobb"><meta name="copyright" content="mobb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="常用Linux命令基本使用   序号 命令 对应英文 作用    01 ls list 查看当前文件夹下的内容   02 pwd print wrok directory 查看当前所在文件夹   03 cd [目录名] change directory 切换文件夹   04 touch [文件名] touch 如果文件不存在，新建文件   05 mkdr [目录名] make directory">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Linux学习">
 <meta property="og:url" content="http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="All about secret">
+<meta property="og:description" content="常用Linux命令基本使用   序号 命令 对应英文 作用    01 ls list 查看当前文件夹下的内容   02 pwd print wrok directory 查看当前所在文件夹   03 cd [目录名] change directory 切换文件夹   04 touch [文件名] touch 如果文件不存在，新建文件   05 mkdr [目录名] make directory">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/linear-gradient(20deg,%20#0062be,%20#925696,%20#cc426e,%20#fb0347)">
+<meta property="og:image" content="http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/img1.png">
 <meta property="article:published_time" content="2022-06-06T16:17:41.000Z">
-<meta property="article:modified_time" content="2022-06-06T16:17:41.115Z">
+<meta property="article:modified_time" content="2022-06-16T13:28:54.452Z">
 <meta property="article:author" content="mobb">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/linear-gradient(20deg,%20#0062be,%20#925696,%20#cc426e,%20#fb0347)"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/img1.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: undefined,
@@ -54,8 +56,8 @@
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-06-07 00:17:41'
+  isToc: true,
+  postUpdate: '2022-06-16 21:28:54'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -149,7 +151,896 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">All about secret</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Linux学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-06T16:17:41.000Z" title="发表于 2022-06-07 00:17:41">2022-06-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-06T16:17:41.115Z" title="更新于 2022-06-07 00:17:41">2022-06-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux学习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">mobb</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/">http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">All about secret</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/linear-gradient(20deg,%20#0062be,%20#925696,%20#cc426e,%20#fb0347)" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/"><img class="next-cover" src="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/img1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">逆向之路</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">mobb</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/" title="Linux学习"><img src="/linear-gradient(20deg,%20#0062be,%20#925696,%20#cc426e,%20#fb0347)" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux学习"/></a><div class="content"><a class="title" href="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/" title="Linux学习">Linux学习</a><time datetime="2022-06-06T16:17:41.000Z" title="发表于 2022-06-07 00:17:41">2022-06-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/" title="逆向之路"><img src="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="逆向之路"/></a><div class="content"><a class="title" href="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/" title="逆向之路">逆向之路</a><time datetime="2022-05-28T17:05:00.000Z" title="发表于 2022-05-29 01:05:00">2022-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/10/%E6%B5%85%E5%AD%A6%E6%B1%87%E7%BC%96/" title="浅学汇编"><img src="/2022/05/10/%E6%B5%85%E5%AD%A6%E6%B1%87%E7%BC%96/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅学汇编"/></a><div class="content"><a class="title" href="/2022/05/10/%E6%B5%85%E5%AD%A6%E6%B1%87%E7%BC%96/" title="浅学汇编">浅学汇编</a><time datetime="2022-05-09T17:00:17.000Z" title="发表于 2022-05-10 01:00:17">2022-05-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/15/CTF%E9%80%86%E5%90%91%E5%AE%9E%E6%88%98ichunqiu/" title="CTF逆向实战ichunqiu"><img src="/2022/04/15/CTF%E9%80%86%E5%90%91%E5%AE%9E%E6%88%98ichunqiu/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CTF逆向实战ichunqiu"/></a><div class="content"><a class="title" href="/2022/04/15/CTF%E9%80%86%E5%90%91%E5%AE%9E%E6%88%98ichunqiu/" title="CTF逆向实战ichunqiu">CTF逆向实战ichunqiu</a><time datetime="2022-04-15T02:28:22.000Z" title="发表于 2022-04-15 10:28:22">2022-04-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/10/%E5%BC%95%E7%94%A8-new/" title="引用&amp;new"><img src="/2022/02/10/%E5%BC%95%E7%94%A8-new/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="引用&amp;new"/></a><div class="content"><a class="title" href="/2022/02/10/%E5%BC%95%E7%94%A8-new/" title="引用&amp;new">引用&amp;new</a><time datetime="2022-02-10T11:35:50.000Z" title="发表于 2022-02-10 19:35:50">2022-02-10</time></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By mobb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script>var preloader = {
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/img1.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">All about secret</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Linux学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-06T16:17:41.000Z" title="发表于 2022-06-07 00:17:41">2022-06-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-16T13:28:54.452Z" title="更新于 2022-06-16 21:28:54">2022-06-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux学习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="常用Linux命令基本使用"><a href="#常用Linux命令基本使用" class="headerlink" title="常用Linux命令基本使用"></a>常用Linux命令基本使用</h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>对应英文</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>ls</td>
+<td>list</td>
+<td>查看当前文件夹下的内容</td>
+</tr>
+<tr>
+<td>02</td>
+<td>pwd</td>
+<td>print wrok directory</td>
+<td>查看当前所在文件夹</td>
+</tr>
+<tr>
+<td>03</td>
+<td>cd [目录名]</td>
+<td>change directory</td>
+<td>切换文件夹</td>
+</tr>
+<tr>
+<td>04</td>
+<td>touch [文件名]</td>
+<td>touch</td>
+<td>如果文件不存在，新建文件</td>
+</tr>
+<tr>
+<td>05</td>
+<td>mkdr [目录名]</td>
+<td>make directory</td>
+<td>创建目录</td>
+</tr>
+<tr>
+<td>06</td>
+<td>rm [文件名]</td>
+<td>remove</td>
+<td>删除置顶的文件名</td>
+</tr>
+<tr>
+<td>07</td>
+<td>clear</td>
+<td>clear</td>
+<td>清屏</td>
+</tr>
+</tbody></table>
+<p><em>小技巧</em></p>
+<ul>
+<li>Ctrl + Shift + = 放大终端窗口的字体显示</li>
+<li>Ctrl + - 缩小终端窗口的字体显示</li>
+<li>Tab键自动补全</li>
+</ul>
+<p><strong>终端命令格式</strong>   </p>
+<p>command [-option] [parameter]  例如：rm 只能删除文件，但rm -r 可以删除文件夹</p>
+<h3 id="ls命令说明"><a href="#ls命令说明" class="headerlink" title="ls命令说明"></a>ls命令说明</h3><ul>
+<li>Linux文件或者目录名称最长可以有256个字符</li>
+<li>以<code>.</code>开头的文件为隐藏文件，需要用-a (all的缩写)参数才能显示</li>
+<li><code>.</code>代表当前目录</li>
+<li><code>..</code>代表上一级目录</li>
+<li><code>-l</code> 以列表方式显示文件的详细信息</li>
+<li><code>-h</code> 配合 <code>-l</code>以人性化的方式显示文件大小 </li>
+</ul>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220605222528758.png" alt="image-20220605222528758"></p>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220605222622855.png" alt="image-20220605222622855"></p>
+<h4 id="ls-l拓展"><a href="#ls-l拓展" class="headerlink" title="ls -l拓展"></a>ls -l拓展</h4><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220607220520352.png" alt="image-20220607220520352"></p>
+<h4 id="ls通配符的使用"><a href="#ls通配符的使用" class="headerlink" title="ls通配符的使用"></a>ls通配符的使用</h4><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220606003616743.png" alt="image-20220606003616743"></p>
+<h3 id="cd说明"><a href="#cd说明" class="headerlink" title="cd说明"></a>cd说明</h3><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220606004428331.png" alt="image-20220606004428331"></p>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><p><code>mkdir -p a/b/c/d</code>可以快速创建目录下的子目录，同时也可以<code>cd a/b/c/d</code></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td>可以递归创建目录</td>
+</tr>
+</tbody></table>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>使用rm删除文件不能恢复</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-f</td>
+<td>强制删除，忽略不存在的文件，无需提示</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>递归地删除目录下的内容，删除文件夹时必须加此参数</td>
+</tr>
+</tbody></table>
+<h3 id="拷贝和移动文件"><a href="#拷贝和移动文件" class="headerlink" title="拷贝和移动文件"></a>拷贝和移动文件</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>对应英文</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>tree[目录名]</td>
+<td>tree</td>
+<td>以树状图列出文件目录结构</td>
+</tr>
+<tr>
+<td>02</td>
+<td>cp 源文件 目标文件</td>
+<td>copy</td>
+<td>复制文件或目录</td>
+</tr>
+<tr>
+<td>03</td>
+<td>mv 源文件 目标文件</td>
+<td>move</td>
+<td>移动文件或者1目录/文件或目录重命名</td>
+</tr>
+</tbody></table>
+<h4 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h4><p>tree命令可以以树状图列出文件目录结构</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-d</td>
+<td>只显示目录</td>
+</tr>
+</tbody></table>
+<h4 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h4><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-i</td>
+<td>覆盖文件前提示</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>若给出的源文件是目录文件。则cp，讲递归复制该目录下的所有子目录和文件，目标文件必须为一个目录名</td>
+</tr>
+</tbody></table>
+<p><code>例：cp ~/Documents/readme.txt ./readme.txt</code>或者 cp ~/Documents/readme.txt . 将Documents下的txt文件复制到当前目录</p>
+<p><code>cp -r a test</code>将a文件夹复制到当前目录下，并重命名为test</p>
+<h4 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h4><p>移动文件：</p>
+<ul>
+<li><p>mv test ~/Documents/</p>
+</li>
+<li><p>mv a/b/c/123.txt .</p>
+</li>
+</ul>
+<p>重命名</p>
+<ul>
+<li>mv test.txt demo.txt</li>
+<li>mv -i test.txt demo.txt</li>
+</ul>
+<h3 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>对应英文</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>cat 文件名</td>
+<td>concatenate</td>
+<td>查看文件内容，创建文件，文件合并，追加文件</td>
+</tr>
+<tr>
+<td>02</td>
+<td>more文件名</td>
+<td>more</td>
+<td>分屏显示文件内容</td>
+</tr>
+<tr>
+<td>03</td>
+<td>grep 搜索文本文件名</td>
+<td>grep</td>
+<td>搜索文本文件内容</td>
+</tr>
+</tbody></table>
+<h4 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h4><ul>
+<li><p>可以用来查看文件内容、创建文件、文件合并、追加文件内容等功能</p>
+</li>
+<li><p>会一次显示所有内容，适合查看内容较少的文本文件</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-b</td>
+<td>对非空输出行编号</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>对输出的所有行编号</td>
+</tr>
+</tbody></table>
+<h4 id="more"><a href="#more" class="headerlink" title="more"></a>more</h4><ul>
+<li><p>可以用于分屏显示文件内容，每次只显示一页内容</p>
+</li>
+<li><p>适合于查看内容较多的文本文件</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>操作键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>空格键</td>
+<td>显示手册页的下一屏</td>
+</tr>
+<tr>
+<td>Enter键</td>
+<td>一次滚动手册页的一行</td>
+</tr>
+<tr>
+<td>b</td>
+<td>回滚一屏</td>
+</tr>
+<tr>
+<td>f</td>
+<td>前滚一屏</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>/word</td>
+<td>搜索word字符串</td>
+</tr>
+</tbody></table>
+<h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n</td>
+<td>显示匹配行及行号</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>显示不包含匹配文本的所有行（相当于求反）</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>忽略大小写</td>
+</tr>
+</tbody></table>
+<ul>
+<li>常用的两种模式查找</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>^a</td>
+<td>行首，搜寻以a开头的行</td>
+</tr>
+<tr>
+<td>ke$</td>
+<td>行尾，搜寻以ke结束的行</td>
+</tr>
+</tbody></table>
+<h4 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h4><p><code>echo</code>会在终端中显示参数指定的文字，通常会和重定向联合使用</p>
+<h4 id="重定向-gt-和-gt-gt"><a href="#重定向-gt-和-gt-gt" class="headerlink" title="重定向&gt;和&gt;&gt;"></a>重定向&gt;和&gt;&gt;</h4><ul>
+<li>Linux允许将命令执行结果重定向到一个文件</li>
+<li>将本应显示在终端上的内容输出/追加到指定文件中</li>
+<li><code>&gt;</code>表示输出，会覆盖文件原有的内容</li>
+<li><code>&gt;&gt;</code>表示追加，会讲内容追加到已有文件的末尾</li>
+</ul>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道 |"></a>管道 |</h3><ul>
+<li>Linux允许将一个命令的输出可以通过管道作为另一个命令的输出</li>
+<li>可以理解现实生活中的管子，管子的一头塞东西进去，另一台取出来，这里<code>|</code>的左右分为两端，左端塞东西（写），有段取东西（读）</li>
+</ul>
+<p>常用的管道命令有：</p>
+<ul>
+<li>more：分屏显示内容</li>
+<li>grep：在命令执行结果的基础上查询指定的文本</li>
+</ul>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220606210832543.png" alt="image-20220606210832543"></p>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220606210903209.png" alt="image-20220606210903209"></p>
+<h2 id="远程管理常用命令"><a href="#远程管理常用命令" class="headerlink" title="远程管理常用命令"></a>远程管理常用命令</h2><h3 id="关机-重启"><a href="#关机-重启" class="headerlink" title="关机/重启"></a>关机/重启</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>对应英文</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>shutdown 选项 时间</td>
+<td>shutdown</td>
+<td>关机/重新启动</td>
+</tr>
+<tr>
+<td>02</td>
+<td>shutdown -r</td>
+<td></td>
+<td>重启</td>
+</tr>
+<tr>
+<td>03</td>
+<td>shutdown 时间20:25</td>
+<td></td>
+<td>在指定时间关机</td>
+</tr>
+<tr>
+<td>04</td>
+<td>shutdown +10</td>
+<td></td>
+<td>在10分钟后关机</td>
+</tr>
+</tbody></table>
+<h3 id="查看或配置网卡信息"><a href="#查看或配置网卡信息" class="headerlink" title="查看或配置网卡信息"></a>查看或配置网卡信息</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>对应英文</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>ifconfig</td>
+<td>configure a network interface</td>
+<td>查看/配置计算机当前的网卡配置信息</td>
+</tr>
+<tr>
+<td>02</td>
+<td>ping ip地址</td>
+<td>ping</td>
+<td>检测到目标ip地址的连接是否正常</td>
+</tr>
+</tbody></table>
+<h4 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h4><p>查看网卡对应的IP地址 <code>ifconfig | grep inet</code></p>
+<p>提示：一台计算机中有可能会有一个物理网卡和多个虚拟网卡，在LInux中物理网卡的名字通常以ensXX表示</p>
+<ul>
+<li>127.0.0.1被称为本地回环/回环地址，一般用来测试本机网卡是否正常</li>
+</ul>
+<h4 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h4><ul>
+<li>ping一般用于检测当前计算机到目标计算机之间的网络是否通畅，数值越大，速度越慢</li>
+</ul>
+<blockquote>
+<ul>
+<li>ping的工作原理与潜水艇的声呐相似，ping这个命令就是取自声呐的声音</li>
+<li>网络管理员之间也常将ping用作动词–ping一下计算机X，看他是否开着</li>
+</ul>
+</blockquote>
+<p>原理：网络上的机器都有唯一确定的IP地址，我们给目标IP地址发送一个数据包，对方就要返回一个数据包，根据返回的数据包以及时间，我们可以确定目标主机的存在</p>
+<p>提示：在Linux中，想要终止一个终端程序的执行，绝大多数可以使用Ctrl+C</p>
+<h4 id="域名和端口号"><a href="#域名和端口号" class="headerlink" title="域名和端口号"></a>域名和端口号</h4><ul>
+<li>由一串<code>用点分隔的</code>字符组成，例如：<code>www.itcat.cn</code></li>
+<li>是IP地址的别名，方便用户记忆</li>
+<li>IP地址：通过IP地址找到网络上的计算机</li>
+<li>端口号：通过端口号可以找到计算机上运行的应用程序</li>
+<li>SSH服务器的默认端口是<code>22</code>，如果是默认端口号，在连接的时候，可以省略</li>
+<li>常见服务端口列表：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>服务</th>
+<th>端口号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>SSH服务器</td>
+<td>22</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Web服务器</td>
+<td>80</td>
+</tr>
+<tr>
+<td>03</td>
+<td>HTTPS</td>
+<td>443</td>
+</tr>
+<tr>
+<td>04</td>
+<td>FTP服务器</td>
+<td>21</td>
+</tr>
+</tbody></table>
+<h3 id="SSH客户端的简单使用"><a href="#SSH客户端的简单使用" class="headerlink" title="SSH客户端的简单使用"></a>SSH客户端的简单使用</h3><p><code>ssh -p port user@remote</code></p>
+<ul>
+<li><code>user</code>是在远程机器上的用户名，如果不指定的话默认为当前用户</li>
+<li><code>remote</code>是远程机器的地址，可以是IP/域名，或者是后面会提到的别名</li>
+<li><code>port</code>是SSH Sever监听的端口，如果不指定，就为默认值<code>22</code></li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>使用exit退出当前用户的登录</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>ssh这个终端命令只能在Linux或者UNIX系统下使用</li>
+<li>如果在WIndows系统中，可以安装PuTTY或者XShell客户端软件即可</li>
+<li>注意在Ubuntu使用sudo apt-get install openssh-server命令下载</li>
+</ul>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220607112937795.png" alt="image-20220607112937795"></p>
+<h3 id="scp（掌握）"><a href="#scp（掌握）" class="headerlink" title="scp（掌握）"></a>scp（掌握）</h3><ul>
+<li>scp就是secure copy，是一个在LInux下用来进行远程拷贝文件的命令</li>
+<li>它的地址格式与ssh基本相同，需要注意的是，在指定端口时用的是大写的-P而不是小写的</li>
+<li>scp只能在Linux和Mac下使用</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-r</td>
+<td>若给出的源文件是目录文件。则scp</td>
+</tr>
+<tr>
+<td>-P</td>
+<td>若远程SSH服务器的端口不是22，则需要使用大写字母-P选项指定端口</td>
+</tr>
+</tbody></table>
+<p>把本地当前目录下的01.py文件复制到远程家目录下的Desktop/01.py</p>
+<p><code>scp -P port user@remote:Desktop/01.py 01.py</code></p>
+<p>把远程家目录下的Desktop/01.py文件复制到本地当前目录下的01.py</p>
+<p><code>scp -P port user@remote:Desktop/01.py 01.py</code></p>
+<p>把当前目录下的demo文件夹复制到远程家目录下的Desktop</p>
+<p><code>scp -r demo user@remote:Desktop</code></p>
+<p>把远程家目录下的Desktop复制到当前目录下的demo文件夹</p>
+<p><code>scp -r user@remote:Desktop demo</code></p>
+<h3 id="FTP-Ubuntu连接windows"><a href="#FTP-Ubuntu连接windows" class="headerlink" title="FTP Ubuntu连接windows"></a>FTP Ubuntu连接windows</h3><p>Windows远程传输文件到Linux</p>
+<p>连不上是因为没有安装ftp服务，sudo apt-get install vsftpd  </p>
+<p>下载Filezilla</p>
+<h3 id="SSH高级（知道）"><a href="#SSH高级（知道）" class="headerlink" title="SSH高级（知道）"></a>SSH高级（知道）</h3><p>windows的服务里安装ssh服务器后记得 cmd里 net start sshd一下！</p>
+<p>注意每次重启后都要重新：net start sshd</p>
+<p>Windows安装ssh服务 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/04e64bfcc79b">win10 安装ssh并作为服务器使用 - 简书 (jianshu.com)</a></p>
+<h4 id="ssh免密码登录"><a href="#ssh免密码登录" class="headerlink" title="ssh免密码登录"></a>ssh免密码登录</h4><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220607211107574.png" alt="image-20220607211107574"></p>
+<h4 id="ssh起别名"><a href="#ssh起别名" class="headerlink" title="ssh起别名"></a>ssh起别名</h4><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220607211640631.png" alt="image-20220607211640631"></p>
+<h3 id="用户权限相关命令"><a href="#用户权限相关命令" class="headerlink" title="用户权限相关命令"></a>用户权限相关命令</h3><h4 id="chmod（重要）"><a href="#chmod（重要）" class="headerlink" title="chmod（重要）"></a>chmod（重要）</h4><p>chmod可以修改<code>用户/组/</code> 对<code>文件/目录</code>的权限</p>
+<p>命令格式如下：</p>
+<p><code>chmod +/-rwx 文件名|目录名</code></p>
+<p><code>.01.py</code>执行当前目录下的01.py文件</p>
+<p>例如：<code>chmod -x test</code>删除test文件的可执行权限</p>
+<h4 id="超级用户"><a href="#超级用户" class="headerlink" title="超级用户"></a>超级用户</h4><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220607230055395.png" alt="image-20220607230055395"></p>
+<h4 id="组管理终端命令"><a href="#组管理终端命令" class="headerlink" title="组管理终端命令"></a>组管理终端命令</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>groupadd 组名</td>
+<td>添加组</td>
+</tr>
+<tr>
+<td>02</td>
+<td>groupdel 组名</td>
+<td>删除组</td>
+</tr>
+<tr>
+<td>03</td>
+<td>cat/etc/group</td>
+<td>查看组信息</td>
+</tr>
+<tr>
+<td>04</td>
+<td>chgrp 组名 文件/目录名</td>
+<td>修改文件/目录的所属组</td>
+</tr>
+</tbody></table>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220608000613026.png" alt="image-20220608000613026"></p>
+<h4 id="创建用户-设置密码-删除用户"><a href="#创建用户-设置密码-删除用户" class="headerlink" title="创建用户/设置密码/删除用户"></a>创建用户/设置密码/删除用户</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>useradd -m -g 组新建用户名</td>
+<td>添加新用户</td>
+<td>-m自动建立用户家目录  -g指定用户所在组，否则会建立一个和同名的组</td>
+</tr>
+<tr>
+<td>02</td>
+<td>passwd 用户名</td>
+<td>设置用户密码</td>
+<td>如果是普通用户，直接用passwd可以修改自己的账户密码</td>
+</tr>
+<tr>
+<td>03</td>
+<td>userdel -r 用户名</td>
+<td>删除用户</td>
+<td>-r选项会自动删除用户家目录</td>
+</tr>
+<tr>
+<td>04</td>
+<td>cat/etc/passwd|grep 用户名</td>
+<td>确认用户信息</td>
+<td>新建用户后，用户信息会保存在/etc/passwd文件中</td>
+</tr>
+</tbody></table>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220607234510821.png" alt="image-20220607234510821"></p>
+<h4 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>id[用户名]</td>
+<td>查看用户UID和GID信息</td>
+</tr>
+<tr>
+<td>02</td>
+<td>who</td>
+<td>查看当前所有登录的用户列表</td>
+</tr>
+<tr>
+<td>03</td>
+<td>whoami</td>
+<td>查看当前登录用户的账户名</td>
+</tr>
+</tbody></table>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220608001246237.png" alt="image-20220608001246237"></p>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220608183143980.png" alt="image-20220608183143980"></p>
+<h4 id="usermod"><a href="#usermod" class="headerlink" title="usermod"></a>usermod</h4><ul>
+<li><code>username</code>可以用来设置用户的主组/附加组和登录Shell，命令格式如下：</li>
+<li>主组：通常在新建用户时指定，在etc/passwd的第四列GID对应的组</li>
+<li>附加组：在etc/group中最后一列表示改组的用户列表，用于指定用户的附加权限</li>
+</ul>
+<p><strong>修改用户的主组（passwd中的GID）</strong></p>
+<p>usermod -g 组 用户名</p>
+<p><strong>修改用户的附加组</strong></p>
+<p>usermod -G 组 用户名</p>
+<p><strong>修改用户登录 Shell</strong></p>
+<p>usermod -s /bin/bash</p>
+<p>注意：默认使用<code>useradd</code>添加的用户是没有权限使用sudo以root身份执行命令的，可以使用以下命令，将用户添加到sudo附加组中</p>
+<p>user -G sudo 用户名</p>
+<h4 id="passwd文件"><a href="#passwd文件" class="headerlink" title="passwd文件"></a>passwd文件</h4><p><code>/etc/passwd</code>文件存放的是用户的信息，由6个分号组成的7个信息，分别是</p>
+<p>1、用户名</p>
+<p>2、密码（x，表示加密的密码）</p>
+<p>3、UID（用户标识）</p>
+<p>4、GID（组标识）</p>
+<p>5、用户全名或本机账号</p>
+<p>6、家目录</p>
+<p>7、登录使用的Shell，就是登录之后，使用的终端命令，Ubuntu默认是dash</p>
+<h4 id="which（重要）"><a href="#which（重要）" class="headerlink" title="which（重要）"></a>which（重要）</h4><ul>
+<li>/etc/passwd是用于保存用户信息的文件</li>
+<li>/usr/bin/passwd是用于修改用户密码的程序</li>
+<li>which命令可以查看执行命令所在位置，例如：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">which ls</span><br><span class="line"># 输出</span><br><span class="line">/bin/ls</span><br><span class="line">which useradd</span><br><span class="line">#输出</span><br><span class="line">/usr/sbin/useradd</span><br></pre></td></tr></table></figure>
+
+<h4 id="bin和sbin"><a href="#bin和sbin" class="headerlink" title="bin和sbin"></a>bin和sbin</h4><ul>
+<li>在Linux中，绝大多数可执行文件都是保存在/bin、/sbin、/usr/bin、/usr/sbin</li>
+<li>/bin（binary）是二进制执行文件目录，主要用于具体应用</li>
+<li>/sbin（system binary）是系统管理员专用的二进制代码存放目录，主要用于系统管理</li>
+<li>/usr/bin （user commands for applications）后期安装的一些软件</li>
+<li>/usr/sbin（super user commands for applications）超级用户的一些管理程序</li>
+</ul>
+<h3 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>su - 用户名</td>
+<td>切换用户、并且切换目录</td>
+<td>- 可以切换到用户家目录，否则保持位置不变</td>
+</tr>
+<tr>
+<td>02</td>
+<td>exit</td>
+<td>退出当前登录账户</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>su不接用户名，可以切换到root，但是不推荐使用，因为不安全</li>
+</ul>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220613190507081.png" alt="image-20220613190507081"></p>
+<h3 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>chown</td>
+<td>修改拥有者</td>
+</tr>
+<tr>
+<td>02</td>
+<td>chgrp</td>
+<td>修改组</td>
+</tr>
+<tr>
+<td>03</td>
+<td>chmod</td>
+<td>修改权限</td>
+</tr>
+</tbody></table>
+<p>命令格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 修改文件|目录的拥有者</span><br><span class="line">chown 用户名 文件名|目录名</span><br><span class="line"></span><br><span class="line"># 递归修改文件|目录的组</span><br><span class="line">chgrp -R 组名 文件名|目录名</span><br><span class="line"></span><br><span class="line"># 递归修改文件权限</span><br><span class="line">chmod -R 755 文件名|目录名</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220613205716898.png" alt="image-20220613205716898"></p>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220613210556381.png" alt="image-20220613210556381"></p>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220613210718873.png" alt="image-20220613210718873"></p>
+<h2 id="系统信息相关命令"><a href="#系统信息相关命令" class="headerlink" title="系统信息相关命令"></a>系统信息相关命令</h2><h4 id="时间和日期"><a href="#时间和日期" class="headerlink" title="时间和日期"></a>时间和日期</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>date</td>
+<td>查看系统时间</td>
+</tr>
+<tr>
+<td>02</td>
+<td>cal</td>
+<td>calendar查看日历，-y选项可以查看一年的日历</td>
+</tr>
+</tbody></table>
+<h4 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>df -h</td>
+<td>disk free显示磁盘剩余空间</td>
+</tr>
+<tr>
+<td>02</td>
+<td>du -h [目录名]</td>
+<td>disk usage 显示目录下的文件大小</td>
+</tr>
+</tbody></table>
+<h4 id="进程信息"><a href="#进程信息" class="headerlink" title="进程信息"></a>进程信息</h4><ul>
+<li>所谓进程，通俗地说就是 <strong>当前正在执行的一个程序</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>ps aux</td>
+<td>pross status 查看进程的详细状况</td>
+</tr>
+<tr>
+<td>02</td>
+<td>top</td>
+<td>动态显示运行中的进程并且排序</td>
+</tr>
+<tr>
+<td>03</td>
+<td>kill [-9] 进程代号</td>
+<td>终止指定代号的进程，-9表示强行终止</td>
+</tr>
+</tbody></table>
+<p><code>ps</code>默认只会显示当前用户通过终端启动的应用程序</p>
+<ul>
+<li><code>ps</code>选项说明功能</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>显示终端上的所有进程，包括其他用户的进程</td>
+</tr>
+<tr>
+<td>u</td>
+<td>显示进程的详细状态</td>
+</tr>
+<tr>
+<td>x</td>
+<td>显示没有控制终端的进程</td>
+</tr>
+</tbody></table>
+<p>提示：使用<code>kill</code>命令时，最好只终止由当前用户开启的进程，而不要终止<code>root</code>身份开启的进程，否则可能导致系统崩溃</p>
+<ul>
+<li>要退出<code>top</code>可以直接输入q</li>
+</ul>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220615235337106.png" alt="image-20220615235337106"></p>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><ul>
+<li>查找文件</li>
+</ul>
+<p> <code>find</code></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>find [路径] -name “*.py”</td>
+<td>查找指定路径下拓展名是.py的文件，包括子目录</td>
+</tr>
+</tbody></table>
+<ul>
+<li>如果省略路径，表示在当前文件夹下查找</li>
+<li>之前学习的通配符，在使用<code>find</code>命令时同时可用</li>
+</ul>
+<ul>
+<li>软链接</li>
+</ul>
+<p><code>ln</code></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>ln -s被链接的源文件链接文件</td>
+<td>监理文件的软链接，用通俗的方式讲类似于WIndows下的快捷方式</td>
+</tr>
+</tbody></table>
+<ul>
+<li>注意：</li>
+<li>1、没有<code>-s</code>选项建立的是一个硬链接文件</li>
+<li>两个文件占用相同大小的硬盘空间，工作中几乎不会建立文件的硬链接</li>
+<li>2、源文件要是用绝对路径，不能使用相对路径，这样可以方便移动链接文件后，仍能够正常使用</li>
+</ul>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220616002050402.png" alt="image-20220616002050402"></p>
+<ul>
+<li>硬链接简介（知道）</li>
+</ul>
+<p>在使用<code>ln</code>创建链接时，如果没有<code>-s</code>选项，会创建一个硬链接，而不是软链接</p>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220616005006968.png" alt="image-20220616005006968"></p>
+<h3 id="打包压缩"><a href="#打包压缩" class="headerlink" title="打包压缩"></a>打包压缩</h3><p><code>tar</code>的命令格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 打包文件</span><br><span class="line">tar -cvf 打包文件.tar 被打包的文件 /路径...</span><br><span class="line"></span><br><span class="line"># 解包文件</span><br><span class="line">tar -xvf 打包文件.tar</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>tar</code>选项说明</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>c</td>
+<td>生成档案文件，创建打包文件</td>
+</tr>
+<tr>
+<td>x</td>
+<td>解开档案文件</td>
+</tr>
+<tr>
+<td>v</td>
+<td>列出归档解档的详细过程，显示进度</td>
+</tr>
+<tr>
+<td>f</td>
+<td>指定档案文件名称，f后面一定是.tar文件，所以必须放选项最后</td>
+</tr>
+</tbody></table>
+<h3 id="压缩-解压缩"><a href="#压缩-解压缩" class="headerlink" title="压缩/解压缩"></a>压缩/解压缩</h3><h4 id="gzip"><a href="#gzip" class="headerlink" title="gzip"></a>gzip</h4><p><code>tar</code>与<code>gzip</code>命令结合可以使用实现文件打包和压缩</p>
+<p>tar 只负责打包文件，但不压缩</p>
+<p>用<code>gzip</code>压缩tar打包后的文件，其拓展名一般用</p>
+<p><code>xxx.tar.gz</code></p>
+<p>在Linux中，最常见的压缩文件格式就是xxx.tar.gz</p>
+<ul>
+<li>tar命令中有一个选项-z可以调用gzip，从而可以方便的实现压缩和解压缩的功能</li>
+<li>命令格式如下：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 压缩文件</span><br><span class="line">tar -zcvf 打包文件.tar.gz 被压缩的文件/路径...</span><br><span class="line"></span><br><span class="line"># 解压缩文件</span><br><span class="line">tar -zxvf 打包文件.tar.gz -C 目标路径</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-C</td>
+<td>解压缩到指定目录，注意：要解压缩的目录必须存在</td>
+</tr>
+</tbody></table>
+<h4 id="bzip2-two"><a href="#bzip2-two" class="headerlink" title="bzip2(two)"></a>bzip2(two)</h4><ul>
+<li><code>tar</code>与<code>bzip2</code>命令结合可以使用实现文件打包和压缩（用法和gzip一样）</li>
+<li>tar 只负责打包文件，但不压缩</li>
+<li>用bzip2压缩tar打包后的文件，其拓展名一般用xxx.tar.br2</li>
+<li>在tar命令中有一个选项**-j**可以调用<code>bzip2</code>，从而可以方便的实现压缩和解压缩的功能</li>
+<li>命令格式如下</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 压缩文件</span><br><span class="line">tar -jcvf 打包文件.tar.br2 被压缩的文件 / 路径...</span><br><span class="line"></span><br><span class="line"># 解压缩文件</span><br><span class="line">tar -jxvf 打包文件.tar.br2</span><br></pre></td></tr></table></figure>
+
+<h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><h4 id="通过apt安装-卸载软件"><a href="#通过apt安装-卸载软件" class="headerlink" title="通过apt安装/卸载软件"></a>通过apt安装/卸载软件</h4><ul>
+<li>apt是<code>Advanced Packaging Tool</code>，是Linux下的一款安装包管理工具</li>
+<li>可以在终端中方便的安装/卸载/更新软件包</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 1.安装软件</span><br><span class="line">$ sudo apt install</span><br><span class="line"></span><br><span class="line"># 2、写在软件</span><br><span class="line">$ sudo apt remove 软件名</span><br><span class="line"></span><br><span class="line"># 3、更新已安装的包</span><br><span class="line">$ sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置软件源"><a href="#配置软件源" class="headerlink" title="配置软件源"></a>配置软件源</h3><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220616212234918.png" alt="image-20220616212234918"></p>
+<h2 id="查阅命令帮助"><a href="#查阅命令帮助" class="headerlink" title="查阅命令帮助"></a>查阅命令帮助</h2><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220605220205568.png" alt="image-20220605220205568"></p>
+<p>例：mkdir –help   man mkdir</p>
+<p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220605220452338.png" alt="image-20220605220452338"></p>
+<h2 id="终端实用技巧"><a href="#终端实用技巧" class="headerlink" title="终端实用技巧"></a>终端实用技巧</h2><p><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/image-20220605221034789.png" alt="image-20220605221034789"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">mobb</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/">http://example.com/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">All about secret</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/img1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/"><img class="next-cover" src="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/img1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">逆向之路</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">mobb</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">常用Linux命令基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ls%E5%91%BD%E4%BB%A4%E8%AF%B4%E6%98%8E"><span class="toc-number">1.1.</span> <span class="toc-text">ls命令说明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ls-l%E6%8B%93%E5%B1%95"><span class="toc-number">1.1.1.</span> <span class="toc-text">ls -l拓展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ls%E9%80%9A%E9%85%8D%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">ls通配符的使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cd%E8%AF%B4%E6%98%8E"><span class="toc-number">1.2.</span> <span class="toc-text">cd说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-number">1.3.</span> <span class="toc-text">mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-number">1.4.</span> <span class="toc-text">rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%B7%E8%B4%9D%E5%92%8C%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">拷贝和移动文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tree"><span class="toc-number">1.5.1.</span> <span class="toc-text">tree</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cp"><span class="toc-number">1.5.2.</span> <span class="toc-text">cp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mv"><span class="toc-number">1.5.3.</span> <span class="toc-text">mv</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="toc-number">1.6.</span> <span class="toc-text">查看文件内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cat"><span class="toc-number">1.6.1.</span> <span class="toc-text">cat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#more"><span class="toc-number">1.6.2.</span> <span class="toc-text">more</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#grep"><span class="toc-number">1.6.3.</span> <span class="toc-text">grep</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#echo"><span class="toc-number">1.6.4.</span> <span class="toc-text">echo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91-gt-%E5%92%8C-gt-gt"><span class="toc-number">1.6.5.</span> <span class="toc-text">重定向&gt;和&gt;&gt;</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E9%81%93"><span class="toc-number">1.7.</span> <span class="toc-text">管道 |</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">远程管理常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E6%9C%BA-%E9%87%8D%E5%90%AF"><span class="toc-number">2.1.</span> <span class="toc-text">关机&#x2F;重启</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%88%96%E9%85%8D%E7%BD%AE%E7%BD%91%E5%8D%A1%E4%BF%A1%E6%81%AF"><span class="toc-number">2.2.</span> <span class="toc-text">查看或配置网卡信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ifconfig"><span class="toc-number">2.2.1.</span> <span class="toc-text">ifconfig</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ping"><span class="toc-number">2.2.2.</span> <span class="toc-text">ping</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="toc-number">2.2.3.</span> <span class="toc-text">域名和端口号</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="toc-number">2.3.</span> <span class="toc-text">SSH客户端的简单使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scp%EF%BC%88%E6%8E%8C%E6%8F%A1%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">scp（掌握）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FTP-Ubuntu%E8%BF%9E%E6%8E%A5windows"><span class="toc-number">2.5.</span> <span class="toc-text">FTP Ubuntu连接windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH%E9%AB%98%E7%BA%A7%EF%BC%88%E7%9F%A5%E9%81%93%EF%BC%89"><span class="toc-number">2.6.</span> <span class="toc-text">SSH高级（知道）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95"><span class="toc-number">2.6.1.</span> <span class="toc-text">ssh免密码登录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ssh%E8%B5%B7%E5%88%AB%E5%90%8D"><span class="toc-number">2.6.2.</span> <span class="toc-text">ssh起别名</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-number">2.7.</span> <span class="toc-text">用户权限相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#chmod%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">2.7.1.</span> <span class="toc-text">chmod（重要）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E7%94%A8%E6%88%B7"><span class="toc-number">2.7.2.</span> <span class="toc-text">超级用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4"><span class="toc-number">2.7.3.</span> <span class="toc-text">组管理终端命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7-%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="toc-number">2.7.4.</span> <span class="toc-text">创建用户&#x2F;设置密码&#x2F;删除用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">2.7.5.</span> <span class="toc-text">查看用户信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#usermod"><span class="toc-number">2.7.6.</span> <span class="toc-text">usermod</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#passwd%E6%96%87%E4%BB%B6"><span class="toc-number">2.7.7.</span> <span class="toc-text">passwd文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#which%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">2.7.8.</span> <span class="toc-text">which（重要）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bin%E5%92%8Csbin"><span class="toc-number">2.7.9.</span> <span class="toc-text">bin和sbin</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="toc-number">2.8.</span> <span class="toc-text">切换用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="toc-number">2.9.</span> <span class="toc-text">修改文件权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">系统信息相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%A5%E6%9C%9F"><span class="toc-number">3.0.1.</span> <span class="toc-text">时间和日期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E4%BF%A1%E6%81%AF"><span class="toc-number">3.0.2.</span> <span class="toc-text">磁盘信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF"><span class="toc-number">3.0.3.</span> <span class="toc-text">进程信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-number">3.1.</span> <span class="toc-text">其他命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9"><span class="toc-number">3.2.</span> <span class="toc-text">打包压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9-%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="toc-number">3.3.</span> <span class="toc-text">压缩&#x2F;解压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gzip"><span class="toc-number">3.3.1.</span> <span class="toc-text">gzip</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bzip2-two"><span class="toc-number">3.3.2.</span> <span class="toc-text">bzip2(two)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-number">3.4.</span> <span class="toc-text">软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87apt%E5%AE%89%E8%A3%85-%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.4.1.</span> <span class="toc-text">通过apt安装&#x2F;卸载软件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="toc-number">3.5.</span> <span class="toc-text">配置软件源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E9%98%85%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9"><span class="toc-number">4.</span> <span class="toc-text">查阅命令帮助</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="toc-number">5.</span> <span class="toc-text">终端实用技巧</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/" title="Linux学习"><img src="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux学习"/></a><div class="content"><a class="title" href="/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/" title="Linux学习">Linux学习</a><time datetime="2022-06-06T16:17:41.000Z" title="发表于 2022-06-07 00:17:41">2022-06-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/" title="逆向之路"><img src="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="逆向之路"/></a><div class="content"><a class="title" href="/2022/05/29/%E9%80%86%E5%90%91%E4%B9%8B%E8%B7%AF/" title="逆向之路">逆向之路</a><time datetime="2022-05-28T17:05:00.000Z" title="发表于 2022-05-29 01:05:00">2022-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/10/%E6%B5%85%E5%AD%A6%E6%B1%87%E7%BC%96/" title="浅学汇编"><img src="/2022/05/10/%E6%B5%85%E5%AD%A6%E6%B1%87%E7%BC%96/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅学汇编"/></a><div class="content"><a class="title" href="/2022/05/10/%E6%B5%85%E5%AD%A6%E6%B1%87%E7%BC%96/" title="浅学汇编">浅学汇编</a><time datetime="2022-05-09T17:00:17.000Z" title="发表于 2022-05-10 01:00:17">2022-05-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/15/CTF%E9%80%86%E5%90%91%E5%AE%9E%E6%88%98ichunqiu/" title="CTF逆向实战ichunqiu"><img src="/2022/04/15/CTF%E9%80%86%E5%90%91%E5%AE%9E%E6%88%98ichunqiu/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CTF逆向实战ichunqiu"/></a><div class="content"><a class="title" href="/2022/04/15/CTF%E9%80%86%E5%90%91%E5%AE%9E%E6%88%98ichunqiu/" title="CTF逆向实战ichunqiu">CTF逆向实战ichunqiu</a><time datetime="2022-04-15T02:28:22.000Z" title="发表于 2022-04-15 10:28:22">2022-04-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/10/%E5%BC%95%E7%94%A8-new/" title="引用&amp;new"><img src="/2022/02/10/%E5%BC%95%E7%94%A8-new/img1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="引用&amp;new"/></a><div class="content"><a class="title" href="/2022/02/10/%E5%BC%95%E7%94%A8-new/" title="引用&amp;new">引用&amp;new</a><time datetime="2022-02-10T11:35:50.000Z" title="发表于 2022-02-10 19:35:50">2022-02-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/2022/06/07/Linux%E5%AD%A6%E4%B9%A0/img1.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By mobb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
